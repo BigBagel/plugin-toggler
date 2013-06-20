@@ -1,0 +1,11 @@
+table.plugins tr.network.active {
+	background-color: #FFFFF2;
+}
+
+table.plugins tr.deleted {
+	background-color: #FFC9C9;
+}
+
+table.plugins tr.deleted td {
+	text-decoration: line-through;
+}
