@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: Network Plugin Toggler
+Plugin Name: Plugin Toggler
 Plugin URI: http://pito.tamu.edu/
-Description: 
-Version: 0.1
+Description: Allows for mass plugin deactivation/reactivation.
+Version: 1.1
 Network: true
 Author: Eric Bakenhus
 Author URI: http://pito.tamu.edu/
@@ -16,22 +16,15 @@ if ( realpath( __FILE__ ) === realpath( $_SERVER["SCRIPT_FILENAME"] ) ) {
 	exit( 'Do not access this file directly.' );
 }
 
-/*
-register_activation_hook( __FILE__, 'network_plugin_toggler_activate' );
-
-function network_plugin_toggler_activate() {
-	if ( ! is_multisite() ) {
-		die( 'Sorry, this plugin is only for multisite.' );
-	}
-}
-*/
+define( 'TOGGLER_BASE', plugin_basename( __FILE__ ) );
+define( 'TOGGLER_ABSPATH', __FILE__ );
 
 if ( is_admin() ) {
-	require_once( plugin_dir_path( __FILE__ ) . 'inc/admin.php');
-
-	if ( class_exists( 'toggler_admin' ) ) {
-		global $toggler_admin_instance;
-		$toggler_admin_instance = new toggler_admin();
+	if ( ! class_exists( 'Toggler_Admin' ) ) {
+		require_once( plugin_dir_path( __FILE__ ) . 'inc/admin.php');
 	}
+
+	global $toggler_admin_instance;
+	$toggler_admin_instance = new Toggler_Admin();
 }
 ?>
