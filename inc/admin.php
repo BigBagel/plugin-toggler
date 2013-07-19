@@ -312,7 +312,7 @@ class Toggler_Admin {
  	 *
  	 * @param array $list
  	 *
- 	 * @return array contains bool indicating success and an array of messages
+ 	 * @return array containing a bool indicating success and an array of messages
  	 *
  	 * @since 1.1
  	*/
@@ -336,9 +336,9 @@ class Toggler_Admin {
  	 * @param array $installed_list
  	 * @param array $installed_ignore_list
  	 * @param array $blog_ids optional
- 	 * @param string $multi optional
+ 	 * @param bool $multi optional
  	 *
- 	 * @return array contains an array of messages
+ 	 * @return array containing an array of messages
  	 *
  	 * @since 1.1
  	*/
@@ -369,14 +369,15 @@ class Toggler_Admin {
 	}
 
 	/**
- 	 * Reactivates a list of plugins network-wide
+ 	 * Reactivates a list of plugins
  	 *
  	 * @param array $installed_list
  	 * @param array $saved_list
  	 * @param array $ignore_list optional
  	 * @param array $blog_ids optional
+ 	 * @param bool $multi optional
  	 *
- 	 * @return array contains an array of messages
+ 	 * @return array containing an array of messages
  	 *
  	 * @since 1.1
  	*/
