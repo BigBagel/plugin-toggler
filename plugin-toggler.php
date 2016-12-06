@@ -1,12 +1,11 @@
 <?php
 /*
 Plugin Name: Plugin Toggler
-Plugin URI: http://pito.tamu.edu/
+Plugin URI: https://github.com/BigBagel/plugin-toggler
 Description: Allows for mass plugin deactivation/reactivation.
 Version: 1.1
 Network: true
 Author: Eric Bakenhus
-Author URI: http://pito.tamu.edu/
 License: GPL2
 */
 
